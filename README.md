@@ -1,15 +1,15 @@
 <h1 align="center">Task Planner </h1> <br>
 <p align="center">
-  <a href="final-project-romy-ver.vercel.app">
     <img alt="Final Project Website" title="website" src="/assets/Task Planner.png" width="250">
-  </a>
 </p>
 <a align="center" href="final-project-romy-ver.vercel.app">Visit Website</a>
 
 <h3 align="center">
   Final Project Ironhack Bootcamp
 <h3>
+<p align="center">
 <img align="center" src="https://globalm.io/wp-content/uploads/2021/10/Ironhack-300x300.png" alt="Ironhack Logo" width="250">
+</p>
 
 ## Table of Contents
 
