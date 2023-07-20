@@ -17,7 +17,6 @@
 - [Features](#features)
 - [Contributors](#contributors)
 - [Acknowledgments](#acknowledgments)
-- [Biggest Challenge] (#biggestchallenge)
 
 
 ## Description
@@ -108,10 +107,6 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Acknowledgments
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Biggest Challenge
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
