@@ -26,11 +26,11 @@ Introducing Task Planner - Your Ultimate Task Management App!
 
 Create tasks effortlessly, keep track of your progress, and resolve them like a pro. Task Planner is the perfect web application to supercharge your productivity.
 
-:rocket: Create Tasks: Add tasks with just a few clicks. 
+🚀 Create Tasks: Add tasks with just a few clicks. 
 
-:chart_with_upwards_trend: Track Progress: Stay organized with a clean dashboard that gives you a clear overview of all your tasks and their status.
+📈 Track Progress: Stay organized with a clean dashboard that gives you a clear overview of all your tasks and their status.
 
-:white_check_mark: Resolve with Ease: Mark completed tasks and watch your accomplishments stack up.
+✅ Resolve with Ease: Mark completed tasks and watch your accomplishments stack up.
 
 Get started with Task Planner today and conquer your tasks like a pro! Sign up now and unlock a world of productivity.
 
