@@ -1,15 +1,15 @@
 <h1 align="center">Task Planner </h1> <br>
 <p align="center">
   <a href="final-project-romy-ver.vercel.app">
-    <img alt="Final Project Website" title="website" src="/assets/Task Planner.png" width="450">
+    <img alt="Final Project Website" title="website" src="/assets/Task Planner.png" width="250">
   </a>
 </p>
-<a href="final-project-romy-ver.vercel.app">Visit Website</a>
+<a align="center" href="final-project-romy-ver.vercel.app">Visit Website</a>
 
 <h3 align="center">
   Final Project Ironhack Bootcamp
 <h3>
-<img src="https://globalm.io/wp-content/uploads/2021/10/Ironhack-300x300.png" alt="Ironhack Logo" width="450">
+<img align="center" src="https://globalm.io/wp-content/uploads/2021/10/Ironhack-300x300.png" alt="Ironhack Logo" width="250">
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@
 - [Features](#features)
 - [Contributors](#contributors)
 - [Acknowledgments](#acknowledgments)
-- [Biggest Challenge]
+- [Biggest Challenge] (#biggestchallenge)
 
 
 ## Description
@@ -26,11 +26,11 @@ Introducing Task Planner - Your Ultimate Task Management App!
 
 Create tasks effortlessly, keep track of your progress, and resolve them like a pro. Task Planner is the perfect web application to supercharge your productivity.
 
-`:rocket:` Create Tasks: Add tasks with just a few clicks. 
+:rocket: Create Tasks: Add tasks with just a few clicks. 
 
-`:chart_with_upwards_trend:` Track Progress: Stay organized with a clean dashboard that gives you a clear overview of all your tasks and their status.
+:chart_with_upwards_trend: Track Progress: Stay organized with a clean dashboard that gives you a clear overview of all your tasks and their status.
 
-`:white_check_mark:` Resolve with Ease: Mark completed tasks and watch your accomplishments stack up.
+:white_check_mark: Resolve with Ease: Mark completed tasks and watch your accomplishments stack up.
 
 Get started with Task Planner today and conquer your tasks like a pro! Sign up now and unlock a world of productivity.
 
@@ -95,7 +95,7 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 
 #### Day Seven
 
-###### Thusday 24, July 2023 
+###### Thusday 25, July 2023 
 
 - [ ] Tarea no completada
 - [ ] Tarea Completada
