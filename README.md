@@ -1,46 +1,117 @@
-https://readme.so/
-https://www.readme-templates.com/
+<h1 align="center">Task Planner </h1> <br>
+<p align="center">
+  <a href="final-project-romy-ver.vercel.app">
+    <img alt="Final Project Website" title="website" src="/assets/Task Planner.png" width="450">
+  </a>
+</p>
+<a href="final-project-romy-ver.vercel.app">Visit Website</a>
 
-## Supabase
+<h3 align="center">
+  Final Project Ironhack Bootcamp
+<h3>
+<img src="https://globalm.io/wp-content/uploads/2021/10/Ironhack-300x300.png" alt="Ironhack Logo" width="450">
 
-Imagina que Supabase es como una caja de herramientas mágica para construir sitios web y aplicaciones. Proporciona muchas herramientas listas para usar que facilitan a los desarrolladores crear experiencias en línea poderosas e interactivas.
+## Table of Contents
 
-### Que es Supabase ?
+- [Description](#description)
+- [Features](#features)
+- [Contributors](#contributors)
+- [Acknowledgments](#acknowledgments)
+- [Biggest Challenge]
 
-Supabase es una plataforma que te ayuda a crear aplicaciones web y móviles. Es como un conjunto de herramientas y servicios que los desarrolladores utilizan para crear sitios web y aplicaciones más fácilmente. Proporciona una base de datos (donde puedes almacenar información), autenticación (para gestionar usuarios y contraseñas) y almacenamiento de archivos (para guardar y compartir fotos, videos y otros archivos).
 
-### Por que lo usamos ?
+## Description
 
-Usamos Supabase porque nos facilita la vida como desarrolladores. Nos ahorra tiempo y esfuerzo al proporcionarnos herramientas poderosas y listas para usar. Con Supabase, podemos construir aplicaciones más rápidamente y con menos código. Además, nos permite almacenar información y gestionar usuarios de forma segura y eficiente.
+Introducing Task Planner - Your Ultimate Task Management App!
 
-### Ejemplo
+Create tasks effortlessly, keep track of your progress, and resolve them like a pro. Task Planner is the perfect web application to supercharge your productivity.
 
-Imagina que quieres construir una aplicación de notas en línea. Con Supabase, puedes crear una base de datos para almacenar todas las notas de los usuarios. También puedes agregar autenticación para que los usuarios puedan registrarse y acceder a sus propias notas. Además, puedes usar el almacenamiento de archivos para permitir a los usuarios adjuntar imágenes a sus notas. Supabase se encarga de toda la parte complicada, y tú solo necesitas escribir un poco de código para personalizar la apariencia y el comportamiento de la aplicación.
+`:rocket:` Create Tasks: Add tasks with just a few clicks. 
 
-## Postgres
+`:chart_with_upwards_trend:` Track Progress: Stay organized with a clean dashboard that gives you a clear overview of all your tasks and their status.
 
-### Que es postgres?
+`:white_check_mark:` Resolve with Ease: Mark completed tasks and watch your accomplishments stack up.
 
-PostgreSQL, o Postgres en resumen, es un sistema de gestión de bases de datos relacionales. Básicamente, es un software que nos ayuda a almacenar y organizar grandes cantidades de información de manera estructurada. Puedes pensar en ello como una versión avanzada de una hoja de cálculo, pero más potente y capaz de manejar una amplia gama de datos.
+Get started with Task Planner today and conquer your tasks like a pro! Sign up now and unlock a world of productivity.
 
-### Porque lo usamos ?
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Usamos PostgreSQL porque nos permite almacenar y recuperar datos de manera eficiente. Es muy confiable y puede manejar grandes cantidades de información sin problemas. Además, tiene muchas características avanzadas, como el soporte para consultas complejas y la capacidad de mantener la integridad de los datos. Es ampliamente utilizado en aplicaciones empresariales y proyectos grandes donde la precisión y la seguridad de los datos son fundamentales.
+## Features
 
-## Diff entre postgress y supabase
+Task Planner was created with the help of a powerful combination of Vue.js, Pinia for state management, Vue Router for client-side routing, Supabase for serverless backend functionality, and Vercel for seamless deployment.
 
-Supabase:
-Supabase es una plataforma de código abierto que combina múltiples herramientas y servicios para simplificar el proceso de construcción de aplicaciones web y móviles. Incluye una base de datos PostgreSQL, un sistema de autenticación y almacenamiento de archivos, entre otras características. Supabase proporciona una configuración lista para usar que facilita a los desarrolladores la creación rápida de aplicaciones. También ofrece capacidades en tiempo real, lo que permite que las aplicaciones actualicen los datos en tiempo real sin requerir actualizaciones manuales.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-PostgreSQL:
-PostgreSQL, a menudo conocido como Postgres, es un sistema de gestión de bases de datos relacionales (RDBMS) de código abierto, poderoso y altamente confiable. Está diseñado para almacenar y gestionar datos estructurados de manera eficiente. PostgreSQL ofrece un conjunto robusto de características, que incluyen soporte para consultas complejas, integridad de datos, escalabilidad y capacidad de extensión. Se utiliza ampliamente en diversas aplicaciones e industrias, especialmente en proyectos que requieren un alto nivel de integridad de datos, seguridad y escalabilidad.
+## Roadmap
 
-Diferencias:
+#### Day One
 
-Funcionalidad: Supabase se basa en PostgreSQL, lo que significa que utiliza PostgreSQL como su motor de base de datos subyacente. Sin embargo, Supabase agrega herramientas y servicios adicionales, como autenticación y almacenamiento de archivos, para proporcionar una plataforma integrada para la construcción de aplicaciones. PostgreSQL, por otro lado, se centra únicamente en proporcionar un sistema de gestión de bases de datos relacionales potente y flexible.
+###### Monday 17, July 2023 
 
-Facilidad de uso: Supabase ofrece una experiencia más amigable y simplificada para los desarrolladores. Proporciona una configuración simplificada e incluye componentes y bibliotecas preconstruidas que facilitan la construcción de aplicaciones. PostgreSQL, al ser un RDBMS independiente, requiere una configuración y ajuste más manuales.
+* Create repository, integrate Supabase and edit README.md. 
+* Upload the project to Vercel
 
-Capacidades en tiempo real: Una ventaja significativa de Supabase son sus capacidades en tiempo real, que permiten a las aplicaciones escuchar los cambios de datos en tiempo real. Esta función no está disponible solo en PostgreSQL y requiere una implementación y configuración adicionales.
+- [ ] Tarea no completada
+- [x] Tarea Completada
 
-Flexibilidad: Si bien Supabase proporciona una plataforma simplificada e integrada, PostgreSQL ofrece más flexibilidad y control sobre la configuración y la instalación de la base de datos. Con PostgreSQL, los desarrolladores tienen un control total sobre la gestión de la base de datos y pueden personalizarla según sus requisitos específicos.
+#### Day Two
+
+###### Thursday 20, July 2023 
+
+* Updated by README.md
+* Implement HTML for SignIn/SignUp pages
+* Implement logic for SignUp, SignIn and Sing Out pages
+
+- [x] Tarea no completada
+- [ ] Tarea Completada
+
+#### Day Three
+
+###### Friday 21, July 2023 
+
+- [ ] Tarea no completada
+- [ ] Tarea Completada
+
+#### Day Four
+
+###### Saturday 22, July 2023 
+
+- [ ] Tarea no completada
+- [ ] Tarea Completada
+
+#### Day Five
+
+###### Sunday 23, July 2023 
+
+- [ ] Tarea no completada
+- [ ] Tarea Completada
+
+#### Day Six
+
+###### Monday 24, July 2023 
+
+- [ ] Tarea no completada
+- [ ] Tarea Completada
+
+#### Day Seven
+
+###### Thusday 24, July 2023 
+
+- [ ] Tarea no completada
+- [ ] Tarea Completada
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Contributors
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Acknowledgments
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Biggest Challenge
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
