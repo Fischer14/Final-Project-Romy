@@ -1,15 +1,15 @@
-<h1 align="center">Task Planner </h1> <br>
-<p align="center">
-    <img alt="Final Project Website" title="website" src="/assets/Task Planner.png" width="250">
-</p>
-<a align="center" href="final-project-romy-ver.vercel.app">Visit Website</a>
+<div align="center">
+<img alt="Final Project Website" title="website" src="/assets/Task Planner.png" width="250">
+<h1 align="center">Task Planner </h1>
+<a align="center" href="https://final-project-romy-ver.vercel.app/auth/login">Visit Website</a>
 
-<h3 align="center">
+<h4 align="center">
   Final Project Ironhack Bootcamp
-<h3>
+<h4>
 <p align="center">
-<img align="center" src="https://globalm.io/wp-content/uploads/2021/10/Ironhack-300x300.png" alt="Ironhack Logo" width="250">
-</p>
+<img align="center" src="https://globalm.io/wp-content/uploads/2021/10/Ironhack-300x300.png" alt="Ironhack Logo" width="50">
+</div>
+
 
 ## Table of Contents
 
