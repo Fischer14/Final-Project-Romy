@@ -1,161 +1,84 @@
 <!-- COMPONENTE BOILERPLATE -->
-
+ 
 <template>
-  <div>
-  
+
+  <div class="container">
+    <h3 class="header-title">Task Planner</h3>
+    <img src="/assets/Task Planner.png" alt="Logo">
+    <p class="header-subtitle">Your Ultimate Task Management App!</p>
+
     <div>
-      <h1>Task Planner</h1>
-      <img src="/assets/Task Planner.png" alt="Logo">
-    </div>
-
-    <div v-show="errorMsg" class="error"> {{ errorMsg }}</div>
-  
-    <div class="container">
-      
-      <form @submit.prevent="login">
-        <h2>Login</h2>
-        
-        <div class="input">
-          <label for="email">Email address</label>
-          <input
-            class="form-control"
-            type="email"
-            placeholder="email@adress.com"
-            v-model="email"
-            required
-          />
+        <form @submit.prevent="signIn" class="form-sign-in">
+        <div class="form">
+          <div class="form-input">
+            <label class="input-field-label">E-mail</label>
+            <input
+              type="email"
+              class="input-field"
+              placeholder="example@gmail.com"
+              id="email"
+              v-model="email"
+              required
+            />
+          </div>
+          <div class="form-input">
+            <label class="input-field-label">Password</label>
+            <div class="password-input">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="**********"
+              v-model="password"
+              required
+            />
+            </div>
+          </div>
+            <button class="button" type="submit">Login</button>
         </div>
-        
-        <div class="input">
-          <label for="password">Password</label>
-          <input
-            class="form-control"
-            :type="passwordVisible ? 'text' : 'password'"
-            placeholder="password123"
-            v-model="password"
-            required
-          />
-          <span class="toggle-password" @click="togglePasswordVisibility('password')">
-            <i class="fa" :class="passwordVisible ? 'fa-eye-slash' : 'fa-eye'"></i>
-          </span>   
-        </div>
-        
-        <button type="submit" class="btn-pers" id="login_button">
-          Login
-        </button>
-        
-        <p>You don't have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p>
-
       </form>
-    
+      <div v-show="errorMsg">{{errorMsg}}</div>
     </div>
+
+    <p>You don't have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p>
   </div>
+
 </template>
 
-<script>
+<script setup>
 import PersonalRouter from "./PersonalRouter.vue";
+import { ref, reactive } from "vue";
 import { useRouter } from "vue-router";
 import { useUserStore } from "../stores/user";
-import { ref } from 'vue';
 
+
+// Route Variables
 const route = "/auth/signup";
 const buttonText = "Sign Up";
 
+// Input Fields
 const email = ref("");
 const password = ref("");
-const redirect = useRouter();
-const userStore = useUserStore();
 
-// Error Message if incorrect data is entered 
+// Error Message
 const errorMsg = ref("");
 
+// Router to push user once SignedIn to the homeView
+const redirect = useRouter();
+
+// Arrow function to Signin user to supaBase
 const signIn = async () => {
   try {
-    await userStore.signIn(email.value, password.value);
-    redirect.push("/");
+    await useUserStore().signIn(email.value, password.value);
+    // redirects user to the homeView
+    redirect.push({ path: "/" });
   } catch (error) {
-    console.error(error);
-    errorMsg.value = "Incorrect email or password.";
-    setTimeout(() => {
-      errorMsg.value = null;
-    }, 3000);
-  }
-    return;
-  }
-
-
-//V Visibility and confirmation of password
-const passwordVisible = ref(false);
-const confirmPasswordVisible = ref(false);
-
-const togglePasswordVisibility = (field) => {
-  if (field === "password") {
-    passwordVisible.value = !passwordVisible.value;
-  } else if (field === "confirmPassword") {
-    confirmPasswordVisible.value = !confirmPasswordVisible.value;
+    alert(error);
   }
 };
 
+
 </script>
 
-<style scoped>
-.container {
-  width: 400px;
-  max-width: 95%;
-}
-
-.input {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.input > label {
-  text-align: start;
-}
-
-.input > input {
-  margin-top: 6px;
-  height: 38px !important;
-}
-
-.btn-pers {
-  position: relative;
-  left: 50%;
-  padding: 1em 2.5em;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 700;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-  transform: translateX(-50%);
-}
-
-.btn-pers:hover {
-  background-color: #198754;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-  color: #fff;
-  transform: translate(-50%, -7px);
-}
-
-.btn-pers:active {
-  transform: translate(-50%, -1px);
-}
-
-.register {
-  text-align: center;
-}
-
-.register > span {
-  color: #0d6efd;
-  cursor: pointer;
-}
+<style>
 
 </style>
