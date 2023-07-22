@@ -7,7 +7,7 @@
   Final Project Ironhack Bootcamp
 <h4>
 <p align="center">
-<img align="center" src="https://globalm.io/wp-content/uploads/2021/10/Ironhack-300x300.png" alt="Ironhack Logo" width="50">
+<img align="center" src="https://globalm.io/wp-content/uploads/2021/10/Ironhack-300x300.png" alt="Ironhack Logo" width="70">
 </div>
 
 
@@ -61,21 +61,28 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 * Implement HTML for SignIn/SignUp pages
 * Implement logic for SignUp, SignIn and Sing Out pages
 
-- [x] Tarea no completada
-- [ ] Tarea Completada
+- [ ] Tarea no completada
+- [x] Tarea Completada
 
 #### Day Three
 
-###### Friday 21, July 2023 
+###### Saturday 22, July 2023 
 
-- [ ] Tarea no completada
+* Updated by README.md
+* Implement HTML for App
+* Implement logic for App
+
+- [x] Tarea no completada
 - [ ] Tarea Completada
 
 #### Day Four
 
-###### Saturday 22, July 2023 
+###### Sunday 23, July 2023 
 
-- [ ] Tarea no completada
+* Updated by README.md
+* Implement CSS for SignUp, SignIn and Sing Out pages
+
+- [x] Tarea no completada
 - [ ] Tarea Completada
 
 #### Day Five
@@ -103,6 +110,8 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 
 
 ## Contributors
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,130 +1,161 @@
 <!-- COMPONENTE BOILERPLATE -->
 
-<!-- User Stories -->
-<!--
-Feature: Log in to the app
-  Background: As a user, I want to log in to the to-do app
-  Given I already have an account
-
-Scenario: As a user, I want to log in to the app
-  When I visit the login page
-  And I enter my email as "test@example.co.uk"
-  And I enter my password as "****"
-  And I click the Log In button
-  Then I expect to be logged in to the app
-  And I expect to see the home screen
- -->
-
-  <template>
-
-  <div class="container">
-   <h2>Sign In</h2>
-    <form @submit.prevent="signIn">
-      <div>
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          v-model.trim="email"
-          :class="{ 'is-invalid': !isEmailValid }"
-        />
-        <div v-if="!isEmailValid" class="error-message">Invalid email</div>
-      </div>
-      <div>
-        <label for="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          v-model.trim="password"
-          :class="{ 'is-invalid': !isPasswordValid }"
-        />
-        <div v-if="!isPasswordValid" class="error-message">Invalid password</div>
-      </div>
-      <button type="submit">Sign In</button>
-    </form>
+<template>
+  <div>
+  
     <div>
-      <button @click="signInWith('Google')">Google</button>
-      <button @click="signInWith('Facebook')">Facebook</button>
+      <h1>Task Planner</h1>
+      <img src="/assets/Task Planner.png" alt="Logo">
     </div>
-    <div>
-      <!-- link to sign up page -->
+
+    <div v-show="errorMsg" class="error"> {{ errorMsg }}</div>
+  
+    <div class="container">
+      
+      <form @submit.prevent="login">
+        <h2>Login</h2>
+        
+        <div class="input">
+          <label for="email">Email address</label>
+          <input
+            class="form-control"
+            type="email"
+            placeholder="email@adress.com"
+            v-model="email"
+            required
+          />
+        </div>
+        
+        <div class="input">
+          <label for="password">Password</label>
+          <input
+            class="form-control"
+            :type="passwordVisible ? 'text' : 'password'"
+            placeholder="password123"
+            v-model="password"
+            required
+          />
+          <span class="toggle-password" @click="togglePasswordVisibility('password')">
+            <i class="fa" :class="passwordVisible ? 'fa-eye-slash' : 'fa-eye'"></i>
+          </span>   
+        </div>
+        
+        <button type="submit" class="btn-pers" id="login_button">
+          Login
+        </button>
+        
+        <p>You don't have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p>
+
+      </form>
+    
     </div>
   </div>
-
 </template>
 
 <script>
 import PersonalRouter from "./PersonalRouter.vue";
 import { useRouter } from "vue-router";
 import { useUserStore } from "../stores/user";
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 
-// Route Variables
 const route = "/auth/signup";
 const buttonText = "Sign Up";
 
-export default {
-  setup() {
-    const email = ref('');
-    const password = ref('');
-    const showPassword = ref(false);
+const email = ref("");
+const password = ref("");
+const redirect = useRouter();
+const userStore = useUserStore();
 
-    const isEmailValid = computed(() => {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email.value);
-    });
+// Error Message if incorrect data is entered 
+const errorMsg = ref("");
 
-    const isPasswordValid = computed(() => {
-      return password.value.length >= 6;
-    });
+const signIn = async () => {
+  try {
+    await userStore.signIn(email.value, password.value);
+    redirect.push("/");
+  } catch (error) {
+    console.error(error);
+    errorMsg.value = "Incorrect email or password.";
+    setTimeout(() => {
+      errorMsg.value = null;
+    }, 3000);
+  }
+    return;
+  }
 
-    const signIn = () => {
-      if (isEmailValid.value && isPasswordValid.value) {
-        // Perform sign in logic here
-        console.log('Signed In');
-      }
-    };
 
-    const signInWith = (provider) => {
-      // Perform sign in with social media logic here
-      console.log(`Signing In with ${provider}`);
-    };
+//V Visibility and confirmation of password
+const passwordVisible = ref(false);
+const confirmPasswordVisible = ref(false);
 
-    const goToSignUp = () => {
-      // Redirect to Sign Up page
-      console.log('Going to Sign Up');
-    };
-
-    return {
-      email,
-      password,
-      showPassword,
-      isEmailValid,
-      isPasswordValid,
-      signIn,
-      signInWith,
-      goToSignUp
-    };
+const togglePasswordVisibility = (field) => {
+  if (field === "password") {
+    passwordVisible.value = !passwordVisible.value;
+  } else if (field === "confirmPassword") {
+    confirmPasswordVisible.value = !confirmPasswordVisible.value;
   }
 };
 
-
-
-
-// Arrow function to Signin user to supaBase
-// const signIn = async () => {
-//   try {
-
-//   } catch (error) {}
-// };
 </script>
 
-<style>
-.is-invalid {
-  border: 1px solid red;
+<style scoped>
+.container {
+  width: 400px;
+  max-width: 95%;
 }
 
-.error-message {
-  color: red;
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
 }
+
+.input > label {
+  text-align: start;
+}
+
+.input > input {
+  margin-top: 6px;
+  height: 38px !important;
+}
+
+.btn-pers {
+  position: relative;
+  left: 50%;
+  padding: 1em 2.5em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  transform: translateX(-50%);
+}
+
+.btn-pers:hover {
+  background-color: #198754;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translate(-50%, -7px);
+}
+
+.btn-pers:active {
+  transform: translate(-50%, -1px);
+}
+
+.register {
+  text-align: center;
+}
+
+.register > span {
+  color: #0d6efd;
+  cursor: pointer;
+}
+
 </style>
