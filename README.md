@@ -69,11 +69,10 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 ###### Saturday 22, July 2023 
 
 * Updated by README.md
-* Implement HTML for App
 * Implement logic for App
 
-- [x] Tarea no completada
-- [ ] Tarea Completada
+- [ ] Tarea no completada
+- [x] Tarea Completada
 
 #### Day Four
 
