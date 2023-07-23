@@ -154,7 +154,7 @@ const signIn = async () => {
 .box-form .left .overlay p {
   font-size: 2vmax;
   line-height: 1;
-  font-weight: 200;
+  font-weight: 400;
   margin-top: 30px;
   margin-bottom: 30px;
 }
