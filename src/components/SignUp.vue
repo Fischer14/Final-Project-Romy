@@ -1,63 +1,60 @@
 <template>
-  <div class="container">
-
-    <div class="header">
-      <div class="header-description">
-        <h3 class="header-title">Task Planner</h3>
-        <img src="/assets/Task Planner.png" alt="Logo">
-        <p class="header-subtitle">Your Ultimate Task Management App!</p>
+  
+  <div class="box-form">
+<!-- Left side of box form -->
+    <div class="left">
+        <div class="overlay">
+          <img src="/assets/Task Planner.png" alt="Logo">
+          <h1>Task Planner</h1>
+          <p>Your Ultimate Task Management App!</p>
       </div>
     </div>
-
-    <form @submit.prevent="signUp" class="form-sign-in">
-      <div class="form">
-        <div class="form-input">
-          <label class="input-field-label">E-mail</label>
-          <input
-            type="email"
-            class="input-field"
-            placeholder="example@gmail.com"
-            id="email"
-            v-model="email"
-            required
-          />
-        </div>
-        <div class="form-input">
-          <label class="input-field-label">Password</label>
-          <input
-            type="password"
-            class="input-field"
-            placeholder="**********"
-            id="password"
-            v-model="password"
-            required
-          />
-        </div>
-        <div class="form-input">
-          <label class="input-field-label">Confirm password</label>
-          <input
-            type="password"
-            class="input-field"
-            placeholder="**********"
-            id="confirmPassword"
-            v-model="confirmPassword"
-            required
-          />
-        </div>
-        <button class="button" type="submit">Sign Up</button>
-        <p>
-          Have an account?
-          <PersonalRouter
-            :route="route"
-            :buttonText="buttonText"
-            class="sign-up-link"
-          />
-        </p>
-      </div>
-    </form>
-
-    <div v-show="errorMsg">{{errorMsg}}</div>
+<!-- Right side of box form -->
+    <div class="right">
+      <form @submit.prevent="signUp">
+        <div class="form">
+          <h3>REGISTER</h3>
+          <div class="inputs">
+            <label>E-mail</label><br>
+            <input
+              type="email"
+              class="input-field"
+              placeholder="example@gmail.com"
+              id="email"
+              v-model="email"
+              required
+            />
+          </div>
+          <div class="inputs">
+            <label>Password</label>
+            <input
+              type="password"
+              class="input-field"
+              placeholder="**********"
+              id="password"
+              v-model="password"
+              required
+            />
+          </div>
+          <div class="inputs">
+            <label>Confirm password</label>
+            <input
+              type="password"
+              class="input-field"
+              placeholder="**********"
+              id="confirmPassword"
+              v-model="confirmPassword"
+              required
+            />
+          </div>
+          <button class="button" type="submit">Sign Up</button>
+          </div>    
+      </form>
+      <p> Have an account? <PersonalRouter :route="route" :buttonText="buttonText"/>
+      </p>
+    </div>
   </div>
+    <div v-show="errorMsg">{{errorMsg}}</div>
 </template>
 
 <script setup>
@@ -70,7 +67,7 @@ import { storeToRefs } from "pinia";
 
 // Route Variables
 const route = "/auth/login";
-const buttonText = "Sign In";
+const buttonText = "Login";
 
 // Input Fields
 const email = ref("");
@@ -101,7 +98,7 @@ const signUp = async () => {
     }
     return;
   }
-  errorMsg.value = "error";
+  errorMsg.value = "Incorrect email or password. Please try again.";
 };
 </script>
 

@@ -1,20 +1,12 @@
 :root {
-    --colorWhite: #ffffff;
-    --colorBlack: #000000;
-    --colorRed: red;
-    --fontSize-sm: 16px;
-    --fontFamily: 'Arial, Helvetica, sans-serif';
-    --fontTitle: 'Arial';
-    --fontBody: 'Helvetica';
+    --font-family: 'Roboto', sans-serif;
 }
 
 /* SignIn Component */
 
-h1 {
-    color: var(--colorRed);
-}
-
 /* SignUp Component */
+
+
 
 /* Home view */
 
