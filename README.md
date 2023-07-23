@@ -79,28 +79,32 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 ###### Sunday 23, July 2023 
 
 * Updated by README.md
-* Implement CSS for SignUp, SignIn and Nav pages
+* Implement CSS for SignUp, SignIn
 
 - [ ] Tarea no completada
 - [x] Tarea Completada
 
 #### Day Five
 
-###### Sunday 23, July 2023 
+###### Monday 24, July 2023 
 
-- [ ] Tarea no completada
+* Updated by README.md
+* Add CSS to NavBar
+* Implement logic to get tasks from supabase
+
+- [x] Tarea no completada
 - [ ] Tarea Completada
 
 #### Day Six
 
-###### Monday 24, July 2023 
+###### Thusday 25, July 2023 
 
 - [ ] Tarea no completada
 - [ ] Tarea Completada
 
 #### Day Seven
 
-###### Thusday 25, July 2023 
+###### Wednesday 26, July 2023 
 
 - [ ] Tarea no completada
 - [ ] Tarea Completada

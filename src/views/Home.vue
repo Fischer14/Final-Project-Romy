@@ -27,10 +27,16 @@ const tasks = ref([]);
 
 // Creamos una función que conecte a la store para conseguir las tareas de supabase
 const getTasks = async() => {
+  try {
   tasks.value = await taskStore.fetchTasks();
+  } catch (error) {
+    console.error('Error getting tasks:', error);
+  }
 };
 
 getTasks();
+
+
 
 </script>
 

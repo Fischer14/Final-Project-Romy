@@ -85,7 +85,7 @@ const signIn = async () => {
     // redirects user to the homeView
     redirect.push({ path: "/" });
   } catch (error) {
-    alert(error);
+    alert("You have entered an invalid e-mail address or password. Please try again!");
   }
 };
 
