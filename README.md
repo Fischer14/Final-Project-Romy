@@ -1,6 +1,6 @@
 <div align="center">
-<img alt="Final Project Website" title="website" src="/assets/Task Planner.png" width="250">
-<h1 align="center">Task Planner </h1>
+<img alt="Final Project Website" title="website" src="/assets/TaskMaster.png" width="250">
+<h1 align="center">TaskMaster </h1>
 <a align="center" href="https://final-project-romy-ver.vercel.app/auth/login">Visit Website</a>
 
 <h4 align="center">
@@ -21,7 +21,7 @@
 
 ## Description
 
-Introducing Task Planner - Your Ultimate Task Management App!
+Introducing TaskMaster - Your Ultimate Task Management App!
 
 Create tasks effortlessly, keep track of your progress, and resolve them like a pro. Task Planner is the perfect web application to supercharge your productivity.
 
@@ -31,7 +31,7 @@ Create tasks effortlessly, keep track of your progress, and resolve them like a 
 
 ✅ Resolve with Ease: Mark completed tasks and watch your accomplishments stack up.
 
-Get started with Task Planner today and conquer your tasks like a pro! Sign up now and unlock a world of productivity.
+Get started with TaskMaster today and conquer your tasks like a pro! Sign up now and unlock a world of productivity.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

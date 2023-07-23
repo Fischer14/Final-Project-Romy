@@ -5,8 +5,8 @@
 <!-- Left side of box form -->
       <div class="left">
         <div class="overlay">
-            <img src="/assets/TaskMaster.png" alt="Logo">
             <h1>Task Master</h1>
+            <img src="/assets/TaskMaster.png" alt="Logo">
             <p>Welcome back! Log in to your <br/> Ultimate Task Management App!</p>
         </div>
       </div>   
@@ -132,14 +132,14 @@ const signIn = async () => {
   overflow: hidden;
 }
 .box-form .left .overlay {
-  padding: 50px;
+  padding: 60px;
   height: 100%;
   background: #cfd0dda1;
   overflow: hidden;
   box-sizing: border-box;
 }
 .box-form .left .overlay h1 {
-  font-size: 7vmax;
+  font-size: 6vmax;
   line-height: 1;
   font-weight: 900;
   margin-top: 30px;
@@ -148,13 +148,13 @@ const signIn = async () => {
 
 .box-form .left .overlay img {
   width: 18em;
-  margin: -7%;
+  margin: -30px;
 }
 
 .box-form .left .overlay p {
-  font-size: 2vmax;
+  font-size: 1.5vmax;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 300;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -210,10 +210,9 @@ const signIn = async () => {
   width: auto;
 }
 
-
 .button {
-  margin: 15px;
   padding: 18px;
+  margin-top: 10%;
   margin-left: 50%;
   margin-bottom: 15%;
   font-size: 12px;

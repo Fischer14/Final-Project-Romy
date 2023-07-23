@@ -4,8 +4,8 @@
 <!-- Left side of box form -->
     <div class="left">
         <div class="overlay">
-          <img src="/assets/TaskMaster.png" alt="Logo">
           <h1>Task Master</h1>
+          <img src="/assets/TaskMaster.png" alt="Logo">
           <p>Your Ultimate Task Management App!</p>
       </div>
     </div>
