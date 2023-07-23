@@ -23,15 +23,16 @@
           </div>
           <div class="form-input">
             <label class="input-field-label">Password</label>
-            <div class="password-input">
-            <input
-              type="text"
-              class="input-field"
-              placeholder="**********"
-              v-model="password"
-              required
-            />
-            </div>
+            <div class="form-input">
+              <input
+                type="password"
+                class="input-field"
+                placeholder="**********"
+                id="password"
+                v-model="password"
+                required
+              />
+          </div>
           </div>
             <button class="button" type="submit">Login</button>
         </div>
