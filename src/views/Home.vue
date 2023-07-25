@@ -2,9 +2,9 @@
   <div class="wrapper">
     <Nav />
     <NewTask />  
-  
     <h1>Tasks:</h1>
     <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+    <Footer />  
   </div>
 </template>
 
@@ -15,6 +15,7 @@ import { useRouter } from 'vue-router';
 import Nav from '../components/Nav.vue';
 import NewTask from '../components/NewTask.vue';
 import TaskItem from '../components/TaskItem.vue';
+import Footer from '../components/Footer.vue'
 
 const taskStore = useTaskStore();
 

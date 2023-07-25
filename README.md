@@ -60,7 +60,7 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 
 ###### Thursday 20, July 2023 
 
-* Updated by README.md
+* Update README.md
 * Add HTML to SignIn/SignUp pages
 * Add logic to SignUp, SignIn and Sing Out pages
 
@@ -71,7 +71,7 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 
 ###### Saturday 22, July 2023 
 
-* Updated by README.md
+* Update README.md
 * Add logic for App
 
 - [ ] Tarea no completada
@@ -81,7 +81,7 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 
 ###### Sunday 23, July 2023 
 
-* Updated by README.md
+* Update README.md
 * Implement CSS for SignUp, SignIn
 
 - [ ] Tarea no completada
@@ -91,8 +91,9 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 
 ###### Monday 24, July 2023 
 
-* Updated by README.md
+* Update README.md
 * Add CSS to NavBar
+* Add Footer
 
 - [x] Tarea no completada
 - [ ] Tarea Completada
@@ -101,18 +102,22 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 
 ###### Thusday 25, July 2023 
 
-* Updated by README.md
+* Update README.md
 * Implement logic to get tasks from supabase
 * Home view CSS
 
-- [ ] Tarea no completada
+- [x] Tarea no completada
 - [ ] Tarea Completada
 
 #### Day Seven
 
 ###### Wednesday 26, July 2023 
 
-- [ ] Tarea no completada
+* Update README.md
+* Account view CSS
+* Presentation
+
+- [x] Tarea no completada
 - [ ] Tarea Completada
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

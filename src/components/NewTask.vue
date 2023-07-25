@@ -1,21 +1,27 @@
 <template>
-    <h1>Add a new Task</h1>
-    <div v-if="showErrorMessage">
-        <p class="error-text">{{ errorMessage }}</p>
-    </div>
-    <div>
-        <div class="input-field">
-            <input type="text" placeholder="Add a Task Title" v-model="name">
+    <div class="add-task">
+        <h1>Add a new Task ☑️</h1>
+        
+        <div v-if="showErrorMessage">
+            <p class="error-text">{{ errorMessage }}</p>
         </div>
-        <div class="input-field">
-            <textarea class="input-field-new-task" type="text" placeholder="Add a Task Description" v-model="description" style="height: 10rem;"></textarea>
+        
+        <div>
+            <div class="input-field">
+                <input type="text" placeholder="Add a Task Title" v-model="name">
+            </div>
+            
+            <div class="input-field">
+                <textarea class="input-field-new-task" type="text" placeholder="Add a Task Description" v-model="description" style="height: 10rem;"></textarea>
+            </div>
+            
+            <button @click="addTask" class="add-btn">Add</button>
         </div>
-        <button @click="addTask" class="button">Add</button>
     </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 import { useTaskStore } from "../stores/task";   
 
 const taskStore = useTaskStore();
@@ -52,5 +58,60 @@ const addTask = () => {
 
 </script>
 
-<style></style>
+<style scoped>
+
+div .add-task {
+  margin: 10px auto;
+  margin-top: 20px;
+  padding: 20px;
+  width: 30%;
+  background: #FFFFFF;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 0 3px 2px #090b6f85;
+}
+
+div .add-task h1 {
+    text-transform: uppercase;
+    color: #0f5257;
+    font-size: 2vmax;
+    font-weight: 700;
+}
+div .error-text {
+    color: red;
+}
+
+div input {
+    width: 20em;
+    padding-left: 2px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+div textarea {
+    width: 30em;
+    padding-left: 2px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.add-btn {
+  padding: 15px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: #fff;
+  background: #0f5257;
+  border: none;
+  border-radius: 30px;
+}
+
+</style>
   

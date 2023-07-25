@@ -65,10 +65,12 @@ nav .navbar {
 
 @media (max-width: 980px) {
   nav .navbar {
-    flex-flow: wrap;
-    text-align: center;
+    height: 500px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-content: center;
-    align-items: center;
   }
 }
 

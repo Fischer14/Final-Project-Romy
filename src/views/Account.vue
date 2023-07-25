@@ -1,7 +1,8 @@
 <template>
-  <Nav />
+  <Nav/>
   <h1>Name: {{username}}</h1>
   <img :src="avatar_url ? avatar_url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'" alt="Profile picture">
+  <Footer />
 </template>
 
 <script setup>
@@ -9,6 +10,7 @@
   import { onMounted, ref, toRefs } from 'vue'
   import { useUserStore } from "../stores/user";
   import Nav from '../components/Nav.vue';
+  import Footer from '../components/Footer.vue'
 
   const userStore = useUserStore();
 
@@ -27,17 +29,17 @@
     avatar_url.value = userStore.profile.avatar_url;
   }
 
-  async function signOut() {
-    try {
-      loading.value = true
-      let { error } = await supabase.auth.signOut()
-      if (error) throw error
-    } catch (error) {
-      alert(error.message)
-    } finally {
-      loading.value = false
-    }
-  }
+  // async function signOut() {
+  //   try {
+  //     loading.value = true
+  //     let { error } = await supabase.auth.signOut()
+  //     if (error) throw error
+  //   } catch (error) {
+  //     alert(error.message)
+  //   } finally {
+  //     loading.value = false
+  //   }
+  // }
 </script>
 
 <style>
