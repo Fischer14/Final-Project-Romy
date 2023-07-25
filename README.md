@@ -10,6 +10,9 @@
 <img align="center" src="https://globalm.io/wp-content/uploads/2021/10/Ironhack-300x300.png" alt="Ironhack Logo" width="70">
 </div>
 
+<div align="center">
+<img alt="Sign In View" src="/assets/signIn.png" width="400">
+</div>
 
 ## Table of Contents
 
@@ -90,7 +93,6 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 
 * Updated by README.md
 * Add CSS to NavBar
-* Implement logic to get tasks from supabase
 
 - [x] Tarea no completada
 - [ ] Tarea Completada
@@ -98,6 +100,10 @@ Task Planner was created with the help of a powerful combination of Vue.js, Pini
 #### Day Six
 
 ###### Thusday 25, July 2023 
+
+* Updated by README.md
+* Implement logic to get tasks from supabase
+* Home view CSS
 
 - [ ] Tarea no completada
 - [ ] Tarea Completada

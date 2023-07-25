@@ -1,19 +1,15 @@
 <template>
   <div class="wrapper">
     <Nav />
-
-    <div class="content"> 
-      <h3>Your account:</h3>
-      <router-link to="/account">Account</router-link>
-    </div>
-    <NewTask />
+    <NewTask />  
+  
     <h1>Tasks:</h1>
     <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted, computed } from 'vue'
 import { useTaskStore } from "../stores/task";
 import { useRouter } from 'vue-router';
 import Nav from '../components/Nav.vue';
@@ -23,18 +19,13 @@ import TaskItem from '../components/TaskItem.vue';
 const taskStore = useTaskStore();
 
 // Variable para guardar las tareas de supabase
-const tasks = ref([]);
+const tasks = computed (() => taskStore.tasksArr);
+console.log("taskComputed:", tasks.value);
 
-// Creamos una función que conecte a la store para conseguir las tareas de supabase
-const getTasks = async() => {
-  try {
-  tasks.value = await taskStore.fetchTasks();
-  } catch (error) {
-    console.error('Error getting tasks:', error);
-  }
-};
-
-getTasks();
+onMounted(async () => {
+  await taskStore.fetchTasks();
+  console.log("taskOnmouted:", tasks.value);
+});
 
 
 
